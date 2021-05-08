@@ -1,0 +1,49 @@
+Day 3/66: Data types in Excel
+
+Text: strings, numbers or dates represented in a text format
+Number: numeric values
+Date: dates and times in an accepted date-time representation
+Boolean: logical or TRUE/FALSE
+
+Excel's preset alignment:
+Text: left aligned
+Logical: center aligned
+Numeric or datetime: right aligned
+
+Converting to text
+TEXT()
+Syntax:
+=TEXT(value, format_text)
+value - The number to convert.
+format_text - The number format to use.
+- The Excel TEXT function returns a number in a given number format, as text. You can use the TEXT function to embed formatted numbers inside text.
+- The input to TEXT must be a numeric value. The output from TEXT is always a text string.
+- format_text must appear in double quotation marks.
+Examples:
+=TEXT(A1,"dd-mmm-yy") // date like "15-Oct-19"
+=TEXT(A1,"0%") // percent like "25%"
+="You won "&TEXT(A1,"$0") // "You won $100"
+
+Converting to numbers
+VALUE() 
+Syntax:
+=VALUE(text)
+text - the text value to convert to a number.
+- The Excel VALUE function converts text that appears in a recognized format (i.e. a number, date, or time format) into a numeric value.
+- Normally, Excel automatically converts text to numeric values as needed, so the VALUE function is not needed.
+- Microsoft states that the VALUE function is provided for compatibility with other spreadsheet programs.
+
+Rounding numbers
+ROUND()
+=ROUND (number, num_digits)
+number - The number to round.
+num_digits - The number of digits to which number should be rounded.
+- The Excel ROUND function returns a number rounded to a given number of digits. The ROUND function can round to the right or left of the decimal point.
+- Round a number to a given number of digits
+
+ROUND() with VALUE()
+Syntax:
+=ROUND(VALUE(text),decimal places)
+
+
+
