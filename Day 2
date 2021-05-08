@@ -1,0 +1,48 @@
+Day 2/66 :  Exploring data in Excel
+Function: Functions are predefined formulas that perform calculations by using specific values, called arguments, in a particular order.
+
+EXACT()   
+syntax : 
+=EXACT(value1, value2)
+- The Excel EXACT function compares two text strings, taking into account upper and lower case characters, and returns TRUE if they are the same, and FALSE if not. 
+- EXACT is case-sensitive.
+- You can add more than two cells to compare but it only returns TRUE or FALSE. If you have more than two cells it won't tell you where they don't match. 
+
+TRIM()
+Syntax:
+=TRIM(value)
+- The Excel TRIM function strips extra spaces from text, leaving only a single space between words and no space characters at the start or end of the text.
+- Remove extra spaces from text
+- TRIM is useful when cleaning up text that has come from other applications or environments.
+
+SORT()  
+Syntax:
+=SORT (array, [sort_index], [sort_order], [by_col])
+array - Range or array to sort.
+sort_index - [optional] Column index to use for sorting. Default is 1.
+sort_order - [optional] 1 = Ascending, -1 = Descending. Default is ascending order.
+by_col - [optional] TRUE = sort by column. FALSE = sort by row. Default is FALSE.
+- The Excel SORT function sorts the contents of a range or array. Values can be sorted by one or more columns. SORT returns a dynamic array of results.
+- Sorts range or array
+- [sort_order] :
+A to Z: 1  --- for A to Z (or smallest to largest) enter one
+Z to A: -1 --- for Z to A (largest to smallest) enter negative one.
+
+FILTER()
+syntax:
+=FILTER(range,criteria,[if_empty])
+array - Range or array to filter.
+include - Boolean array, supplied as criteria.
+if_empty - [optional] Value to return when no results are returned.
+- The Excel FILTER function filters a range of data based on supplied criteria, and extracts matching records.
+
+** Nesting: using a function as part of another function
+** Nested formulas:
+In order to combine functions we will need to create a nested formula. a function as part of another function. Excel executes them from the inside out. 
+
+SORT() with FILTER()
+syntax:
+=SORT(FILTER(range,criteria),[sort_index],[sort_order])
+- FILTER will be executed first, and then those results are used as an argument in SORT.
+
+
